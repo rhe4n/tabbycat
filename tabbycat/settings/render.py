@@ -34,8 +34,8 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 REDIS_HOST = os.environ.get('REDIS_HOST')
 REDIS_PORT = os.environ.get('REDIS_PORT')
 
-print("render debug: REDIS_HOST", REDIS_HOST)
-print("render debug: REDIS_PORT", REDIS_PORT)
+print("render_debug_cache", "redis://" + REDIS_HOST + ":" + REDIS_PORT)
+print("render_debug_channel: ", "redis://" + REDIS_HOST + ":" + REDIS_PORT)
 
 CACHES = {
     "default": {

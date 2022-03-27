@@ -14,7 +14,7 @@ root.addHandler(ch)
 
 # debug for Render.com
 
-root.info('REDIS_HOSTNAME: %s' % (os.environ.get('REDIS_HOSTNAME') if os.environ.get('REDIS_HOSTNAME') else "NONE"))
+root.info('REDIS_HOST: %s' % (os.environ.get('REDIS_HOST') if os.environ.get('REDIS_HOST') else "NONE"))
 root.info('REDIS_PORT: %s' % (os.environ.get('REDIS_PORT') if os.environ.get('REDIS_PORT') else "NONE"))
 
 # UVICORN setup
