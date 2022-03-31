@@ -1,9 +1,4 @@
 services:
-  - type: redis
-    name: tc_redis
-    ipAllowList: [] # only allow internal connections
-    plan: free
-    maxmemoryPolicy: allkeys-lru # (default)
   - type: web
     name: tabbycat
     env: python
@@ -34,6 +29,13 @@ services:
         sync: false
       - key: TIME_ZONE
         sync: false
+  - type: redis
+    name: tc_redis
+    ipAllowList: # required
+      - source: 0.0.0.0
+        description: everywhere
+    plan: free
+    maxmemoryPolicy: allkeys-lru # (default)
 
 databases:
   - name: tc_db
