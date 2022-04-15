@@ -98,7 +98,8 @@ class TournamentConfigureForm(ModelForm):
         help_text=TournamentStaff.help_text,
         initial=_("<strong>Tabulation:</strong> [list tabulation staff here]<br />"
             "<strong>Organisation:</strong> [list organising committee members here]<br />"
-            "<strong>Adjudication:</strong> [list chief adjudicators here]"),
+            "<strong>Adjudication:</strong> [list chief adjudicators here]<br />"
+            "<strong>Equity:</strong> [list equity officers here]"),
         widget=SummernoteWidget(attrs={'height': 150, 'class': 'form-summernote'}),
     )
 
